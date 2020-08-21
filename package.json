@@ -4,7 +4,8 @@
     "description": "An API ton get ahold of data such as photos and performance numbers for different aircraft",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "nodemon index.js"
     },
     "author": "Malte Hallström",
     "license": "ISC",
