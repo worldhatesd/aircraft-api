@@ -21,6 +21,7 @@
         "request": "^2.88.2"
     },
     "devDependencies": {
+        "electron": "^31.0.1",
         "nodemon": "^2.0.4"
     }
 }
