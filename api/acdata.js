@@ -20,7 +20,7 @@ async function getData(req, res) {
 
     var [photo, acData, tsData] = await Promise.all([
         getPhotoURL(reg),
-        getInfo(type),
+        //getInfo(type),
         getTSData(reg),
     ]);
 
@@ -85,7 +85,7 @@ async function getTSData(reg) {
 
     return result;
 }
-
+/*
 async function getInfo(type) {
     const urlSkyBrary =
         "https://www.skybrary.aero/api.php?" +
@@ -219,7 +219,7 @@ async function getInfo(type) {
             return "No type was defined, and the API was unable to automatically recognize it";
         return "Unable to find data for type: " + type;
     }
-}
+}*/
 
 async function getPhotoURL(query) {
     const [JPphoto, ANETphoto] = await Promise.all([
@@ -267,7 +267,7 @@ async function _getPhotoByQueryJP(query) {
 
     let split = image.substr(2).split("/");
 
-    let = split[split.length - 2] + "/" + split[split.length - 1];
+    let id = split[split.length - 2] + "/" + split[split.length - 1];
 
     return {
         url: `https://cdn.jetphotos.com/full/${id}`,
